@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Assignment 9-10 - Login</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="Css/jquery.mobile.structure-1.0.1.css" />
+	<link rel="stylesheet" href="Css/jquery.mobile-1.0.1.css" />
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.mobile-1.0.1.min.js"></script>
+    <script>
+    function validate(){
+        document.getElementById("err_email").innerHTML="";
+		document.getElementById("err_pass").innerHTML="";
+        if(document.getElementById("email").value ==""){document.getElementById("err_email").innerHTML="This Field Is Required"}
+        if(document.getElementById("pass").value ==""){document.getElementById("err_pass").innerHTML="This Field Is Required"}
+        if(document.getElementById("email").value=="admin@lcit.com")
+		{ 
+		 letsGo = true; 
+		 if(document.getElementById("pass").value=="lcit123")
+         {
+            letsGo = true;
+            document.getElementById("submit").href="dashboard.html"
+		 } 
+		 else{
+			alert("Please check Username/password");
+			}
+		}
+		
+	}
+    </script>
+    </head>
+    <body>
+	<div data-role="page" id="home" d>
+
+	<div data-role="content">
+	
+	<div id="branding">
+		<h1>Assignment 9-10 - Welcome</h1>
+	</div>
+	
+	<div class="choice_list"> 
+	<h3>Welcome  </h3>
+	<h3>sign in</h3>
+	<label for="txt-email">email address</label>
+	<input type="email" name="txt-email" id="email" value="" required>
+	<span id="err_email"></span>
+	<br>
+	<label for="txt-password">password</label>
+	<input type="password" name="txt-password" id="pass" value="" required>
+	<span id="err_pass"></span>
+	<br>
+	<div data-role="controlgroup" data-type="horizontal">
+		<a href="#" id="submit" rel="external" data-role="button" onclick="validate()" >Login</a>
+		<a href="signup.html" rel="external" data-role="button" >Register</a>
+		
+		</div
+	
+	</div>
+ 
+	</div>
+
+</div><!-- /page -->
+
+	</body>
+</html>

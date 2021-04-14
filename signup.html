@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title>Assignment 9-10 - Signup</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="Css/jquery.mobile.structure-1.0.1.css" />
+	<link rel="stylesheet" href="Css/jquery.mobile-1.0.1.css" />
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.mobile-1.0.1.min.js"></script>
+    <script >function validation(){
+	var Go=true;
+   if(document.getElementById("fname").value==""){
+        document.getElementById("err1").innerHTML="This field is required!";
+        Go = false;
+    }
+    if(document.getElementById("lname").value==""){
+        document.getElementById("err2").innerHTML="This field is required!";
+        Go = false;
+    }
+    if(document.getElementById("pname").value==""){
+        document.getElementById("err3").innerHTML="This field is required!";
+        Go = false;
+    }
+    if(document.getElementById("email").value==""){
+        document.getElementById("err4").innerHTML="Please Enter Valid Email Address!";
+        Go = false;
+    }
+            if(document.getElementById("cpass").value==""){
+        document.getElementById("err6").innerHTML="Please Enter Password Again!";
+        Go = false;
+    }
+    if(document.getElementById("pass").value==""){
+        document.getElementById("err5").innerHTML="This field is required!";
+        Go = false;}
+        if(document.getElementById("cpass").value !=document.getElementById("pass").value){
+        document.getElementById("err6").innerHTML="Please Enter Same As Above!";
+        Go = false;
+    }
+    
+    if(document.getElementById("birthdate").value==""){
+        document.getElementById("err7").innerHTML="Please Enter Valid Date Of Birth!";
+        Go = false;
+    }
+             if(document.getElementById("province").value === ""){
+        document.getElementById("err8").innerHTML="Please Select Your Province!";
+        Go = false;
+    }
+    
+}
+    
+    </script>
+    </head>
+<body>
+	<div data-role="page" id="home" d>
+
+	<div data-role="content">
+	
+	<div id="branding">
+		<h1>ONLINE REGISTRATION FORM</h1>
+	</div>
+	
+	<div class="choice_list"> 
+	<label for="txt-email">FIRST NAME:</label>
+	<input id="fname" type="text"><span id="err1"></span>
+	<br>
+	<label for="txt-email">Last NAME:</label>
+	<input id="lname" type="text"><span id="err2"></span>
+	<br>
+	<label for="txt-email">PREFFERED NAME:</label>
+	<input id="pname" type="text"><span id="err3"></span>
+	<br>
+	<label for="txt-email">Email:</label>
+	<input id="email" type="text"><span id="err4"></span>
+	<br>
+	<label for="txt-email">PASSWORD:</label>
+	<input id="pass" type="text"><span id="err5"></span>
+	<br>
+	<label for="txt-email">CONFIRM PASSWORD:</label>
+	<input id="cpass" type="password"><span id="err6"></span>
+	<br>
+	<label for="txt-email">BIRTH DATE:</label>
+	<input id="birthdate" type="date"><span id="err7"></span>
+	<br>
+	<label for="txt-email">SELECT YOUR PROVINCE:</label>
+	<select id="province">
+            <option >--PROVINCE--</option>
+        <option>ON</option>
+        <option>QC</option>
+        <option>NS</option>
+        <option>NB</option>
+        <option>MB</option>
+        <option>BC</option>
+        <option>PE</option>
+        <option>SK</option>
+        <option>AB</option>
+        <option>NL</option>
+ </select><span id="err8"></span>
+	<br>
+  <br>
+	<div data-role="controlgroup" data-type="horizontal">
+		<a href="#" id="submit" rel="external" data-role="button" onclick="validation()" >Sign up</a>
+		<a href="Login.html" rel="external" data-role="button" >login</a>
+		
+		</div
+	
+	</div>
+      </body>
+</html>
